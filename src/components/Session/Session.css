@@ -1,1 +1,28 @@
-.session-container{ border-radius:50%; border: 5px solid #FFF;padding:50px;}
+.session-container {
+    background-color: #643E46FF;
+    color: #B10020FF;
+    padding: 50px 25px;
+    font-size: 2rem;
+    margin-top: 50px;
+
+}
+
+#session-label {
+    background-color: white;
+    width: 30%;
+    margin: 2% 35%;
+}
+
+#session-length {
+    padding: 0 5%;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    #session-label {
+        font-size: .7em;
+        width: 60%;
+        padding: 0;
+        margin: 0 20% 10px;
+    }
+}

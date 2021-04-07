@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {Button, Container, Row} from 'react-bootstrap';
 import Break from './components/Break/Break.container';
 import Session from './components/Session/Session.container';
@@ -53,7 +53,7 @@ function App() {
         return () => {
             beep.addEventListener("ended", () => setBeepPlaying(false));
         };
-    }, [ beep ]);
+    }, [beep]);
 
     // Helper functions. ToDo: Get them out of the app.js file to a helper file.
     function decrementBreakLength() {
@@ -100,33 +100,34 @@ function App() {
         setIsActive(!isActive);
     }
 
-  return (
-    <div className="App">
-        <Container className="text-center">
-            <Timer time={timeLeft} mode={mode} />
-            <div className="buttons">
-                <Button onClick={toggleIsActive} id="start_stop">
-                    {isActive ? "Pause" : "Start"}
-                </Button>
-                <Button onClick={reset} id="reset" variant="danger">
-                    Reset
-                </Button>
-            </div>
-            <Row fluid='md'>
-                <Break
-                    length={breakLength}
-                    decrement={decrementBreakLength}
-                    increment={incrementBreakLength}
-                />
-                <Session
-                    length={sessionLength}
-                    decrement={decrementSessionLength}
-                    increment={incrementSessionLength}
-                />
-            </Row>
-        </Container>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Container className="text-center">
+                <Timer time={timeLeft} mode={mode}/>
+                <div className="buttons">
+                    <Button onClick={toggleIsActive} id="start_stop" variant='dark' className='first-button' size='lg'>
+                        {isActive ? "Pause" : "Start"}
+                    </Button>
+                    <Button onClick={reset} id="reset" variant="danger" size='lg'>
+                        Reset
+                    </Button>
+                </div>
+                <Row fluid='md'>
+                    <Break
+                        length={breakLength}
+                        decrement={decrementBreakLength}
+                        increment={incrementBreakLength}
+                    />
+                    <Session
+                        length={sessionLength}
+                        decrement={decrementSessionLength}
+                        increment={incrementSessionLength}
+                    />
+                </Row>
+                <p className='footer'>This module has been developed by <b>Gustavo Malamud</b> for the <b>FreeCodeCamp Frontend Libraries</b> track. </p>
+            </Container>
+        </div>
+    );
 }
 
 export default App;

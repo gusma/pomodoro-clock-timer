@@ -1,2 +1,29 @@
-.break-container{ border-radius:50%; border: 5px solid #000;padding:50px;}
-#break-length{padding: 0 10px;}
+.break-container {
+    background-color: #643E46FF;
+    color: #B10020FF;
+    padding: 50px 25px;
+    font-size: 2rem;
+    margin-top: 50px;
+
+}
+
+#break-label {
+    background-color: white;
+    width: 30%;
+    margin: 2% 35%;
+
+}
+
+#break-length {
+    padding: 0 5%;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    #break-label {
+        font-size: .7em;
+        width: 60%;
+        padding: 0;
+        margin: 0 20% 10px;
+    }
+}

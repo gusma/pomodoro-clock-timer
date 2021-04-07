@@ -1,1 +1,24 @@
-.timer-main-number{font-size:10em;letter-spacing: -0.05em;}
+.mode-format {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.timer-main-number {
+    font-size: 14em;
+    letter-spacing: -0.01em;
+    font-style: italic;
+    font-weight: 800;
+    text-shadow: 0 9px 0 #f00,
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+
+}
+
+@media only screen and (max-width: 768px) {
+    .timer-main-number {
+        font-size: 8rem;
+        padding: 0;
+    }
+}
